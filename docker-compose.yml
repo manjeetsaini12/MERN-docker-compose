@@ -9,7 +9,11 @@ services:
       - mongodb
 
   frontend:
-    build: ./mern/frontend
+    build: 
+      context: ./mern/frontend
+      dockerfile: Dockerfile/Dockerfile.prod
+
+
     ports:
       - "5173:5173"
     networks:
